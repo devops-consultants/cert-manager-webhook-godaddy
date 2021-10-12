@@ -30,7 +30,9 @@ spec:
         webhook:
           config:
             authApiKey: <your GoDaddy authAPIKey>
-            authApiSecret: <your GoDaddy authApiSecret>
+            authApiSecretRef:
+              name: <secret containing your GoDaddy authApiSecret>
+              key: <secret key containing your GoDaddy authApiSecret>
             production: true
             ttl: 600
           groupName: acme.mycompany.com
