@@ -102,5 +102,5 @@ roleRef:
 subjects:
   - apiGroup: ""
     kind: ServiceAccount
-    name: {{ .Values.certManager.serviceAccountName }}
-    namespace: {{ .Values.certManager.namespace }}
+    name: {{ include "godaddy-webhook.fullname" . }}
+    namespace: {{ .Release.Namespace }}
